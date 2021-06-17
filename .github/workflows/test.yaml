@@ -2,6 +2,7 @@ name: GitHub Action to scan the commit for secrets
 on: [push]
 jobs:
   Execute-secret-check:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: trufflehog-actions-scan
