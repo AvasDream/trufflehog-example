@@ -8,4 +8,4 @@ jobs:
     - name: trufflehog-actions-scan
       uses: edplato/trufflehog-actions-scan@master
       with:
-         branch: ${{ github.ref }}
+        scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json"
